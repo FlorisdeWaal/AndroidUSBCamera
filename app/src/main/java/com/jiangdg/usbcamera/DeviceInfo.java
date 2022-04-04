@@ -5,8 +5,8 @@ package com.jiangdg.usbcamera;
  */
 
 public class DeviceInfo {
-    private int VID;
-    private int PID;
+    private int VID;//Product ID
+    private int PID;//Video ID TODO: Unfuck this.....
 
     public DeviceInfo() {
     }

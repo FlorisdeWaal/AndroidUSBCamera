@@ -1,5 +1,5 @@
 apply plugin: 'com.android.library'
-apply plugin: 'com.github.dcendents.android-maven'
+//apply plugin: 'com.github.dcendents.android-maven'
 group='com.github.jiangdongguo'
 
 android {
@@ -7,8 +7,6 @@ android {
     defaultConfig {
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.versionTarget
-        versionCode 2
-        versionName rootProject.ext.versionNameString
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
         // "armeabi-v7a" can adapter most of the devices
@@ -42,4 +40,6 @@ dependencies {
     implementation "androidx.appcompat:appcompat:${androidXVersion}"
 
     implementation(name: 'libusbcommon_v4.1.1', ext: 'aar')
+//    classpath 'com.github.dcendents:android-maven-plugin:1.2'
+//    classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.2'
 }

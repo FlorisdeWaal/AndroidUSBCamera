@@ -96,10 +96,10 @@ public class USBCameraActivity extends AppCompatActivity implements CameraDialog
         for(DeviceInfo deviceInfo : infoList){
             dataList.add("Device：PID_"+deviceInfo.getPID()+" & "+"VID_"+deviceInfo.getVID());
         }
-        AlertCustomDialog.createSimpleListDialog(this, "Please select USB devcie", dataList, new AlertCustomDialog.OnMySelectedListener() {
+        AlertCustomDialog.createSimpleListDialog(this, "Please select USB device", dataList, new AlertCustomDialog.OnMySelectedListener() {
             @Override
-            public void onItemSelected(int postion) {
-                mCameraHelper.requestPermission(postion);
+            public void onItemSelected(int position) {
+                mCameraHelper.requestPermission(position);
             }
         });
     }

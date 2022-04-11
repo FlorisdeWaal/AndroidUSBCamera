@@ -1,0 +1,40 @@
+{
+  "stringTable": {},
+  "buildFiles": [
+    "C:\\Users\\ezmod\\AndroidStudioProjects\\AndroidUSBCamera\\app\\src\\main\\cpp\\CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "C:\\Users\\ezmod\\AppData\\Local\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe",
+      "-C",
+      "C:\\Users\\ezmod\\AndroidStudioProjects\\AndroidUSBCamera\\app\\.cxx\\Debug\\524p615t\\x86",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "C:\\Users\\ezmod\\AppData\\Local\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe",
+    "-C",
+    "C:\\Users\\ezmod\\AndroidStudioProjects\\AndroidUSBCamera\\app\\.cxx\\Debug\\524p615t\\x86",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {
+    "native-ocv-Debug-x86": {
+      "buildCommandComponents": [
+        "C:\\Users\\ezmod\\AppData\\Local\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe",
+        "-C",
+        "C:\\Users\\ezmod\\AndroidStudioProjects\\AndroidUSBCamera\\app\\.cxx\\Debug\\524p615t\\x86",
+        "native-ocv"
+      ],
+      "buildType": "debug",
+      "abi": "x86",
+      "artifactName": "native-ocv",
+      "output": "C:\\Users\\ezmod\\AndroidStudioProjects\\AndroidUSBCamera\\app\\build\\intermediates\\cxx\\Debug\\524p615t\\obj\\x86\\libnative-ocv.so",
+      "runtimeFiles": []
+    }
+  },
+  "toolchains": {},
+  "cFileExtensions": [],
+  "cppFileExtensions": [
+    "cpp"
+  ]
+}

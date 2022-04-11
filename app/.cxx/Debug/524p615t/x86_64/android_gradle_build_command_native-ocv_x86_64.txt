@@ -1,0 +1,7 @@
+Executable : C:\Users\ezmod\AppData\Local\Android\Sdk\cmake\3.10.2.4988404\bin\ninja.exe
+arguments : 
+-C
+C:\Users\ezmod\AndroidStudioProjects\AndroidUSBCamera\app\.cxx\Debug\524p615t\x86_64
+native-ocv
+jvmArgs : 
+

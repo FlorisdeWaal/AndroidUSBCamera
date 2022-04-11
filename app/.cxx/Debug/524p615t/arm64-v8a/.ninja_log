@@ -1,0 +1,9 @@
+# ninja log v5
+2	183	670785762	CMakeFiles/native-ocv.dir/native-ocv.cpp.o	a6c74088d89486d4
+184	3880	670785766	C:/Users/ezmod/AndroidStudioProjects/AndroidUSBCamera/app/build/intermediates/cxx/Debug/524p615t/obj/arm64-v8a/libnative-ocv.so	aa891aef2033c0bd
+1	51	0	clean	131fabc6c42cb0ad
+9	413	670786870	CMakeFiles/native-ocv.dir/native-ocv.cpp.o	a6c74088d89486d4
+413	6448	670786876	C:/Users/ezmod/AndroidStudioProjects/AndroidUSBCamera/app/build/intermediates/cxx/Debug/524p615t/obj/arm64-v8a/libnative-ocv.so	aa891aef2033c0bd
+0	7	0	clean	131fabc6c42cb0ad
+3	243	670787486	CMakeFiles/native-ocv.dir/native-ocv.cpp.o	a6c74088d89486d4
+244	3748	670787489	C:/Users/ezmod/AndroidStudioProjects/AndroidUSBCamera/app/build/intermediates/cxx/Debug/524p615t/obj/arm64-v8a/libnative-ocv.so	aa891aef2033c0bd

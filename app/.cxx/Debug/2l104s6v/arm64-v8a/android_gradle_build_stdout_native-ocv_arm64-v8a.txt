@@ -1,0 +1,3 @@
+ninja: Entering directory `C:\Users\ezmod\AndroidStudioProjects\AndroidUSBCamera\app\.cxx\Debug\2l104s6v\arm64-v8a'
+[1/2] Building CXX object CMakeFiles/native-ocv.dir/native-ocv.cpp.o
+[2/2] Linking CXX shared library C:\Users\ezmod\AndroidStudioProjects\AndroidUSBCamera\app\build\intermediates\cxx\Debug\2l104s6v\obj\arm64-v8a\libnative-ocv.so

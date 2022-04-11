@@ -1,0 +1,3 @@
+C:/Users/ezmod/AndroidStudioProjects/AndroidUSBCamera/app/.cxx/Debug/524p615t/x86_64/CMakeFiles/native-ocv.dir
+C:/Users/ezmod/AndroidStudioProjects/AndroidUSBCamera/app/.cxx/Debug/524p615t/x86_64/CMakeFiles/edit_cache.dir
+C:/Users/ezmod/AndroidStudioProjects/AndroidUSBCamera/app/.cxx/Debug/524p615t/x86_64/CMakeFiles/rebuild_cache.dir

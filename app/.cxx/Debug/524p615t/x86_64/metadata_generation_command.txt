@@ -1,0 +1,24 @@
+                    Executable : C:\Users\ezmod\AppData\Local\Android\Sdk\cmake\3.10.2.4988404\bin\cmake.exe
+arguments : 
+-HC:\Users\ezmod\AndroidStudioProjects\AndroidUSBCamera\app\src\main\cpp
+-DCMAKE_SYSTEM_NAME=Android
+-DCMAKE_EXPORT_COMPILE_COMMANDS=ON
+-DCMAKE_SYSTEM_VERSION=21
+-DANDROID_PLATFORM=android-21
+-DANDROID_ABI=x86_64
+-DCMAKE_ANDROID_ARCH_ABI=x86_64
+-DANDROID_NDK=C:\Users\ezmod\code\android-ndk-r23b
+-DCMAKE_ANDROID_NDK=C:\Users\ezmod\code\android-ndk-r23b
+-DCMAKE_TOOLCHAIN_FILE=C:\Users\ezmod\code\android-ndk-r23b\build\cmake\android.toolchain.cmake
+-DCMAKE_MAKE_PROGRAM=C:\Users\ezmod\AppData\Local\Android\Sdk\cmake\3.10.2.4988404\bin\ninja.exe
+-DCMAKE_LIBRARY_OUTPUT_DIRECTORY=C:\Users\ezmod\AndroidStudioProjects\AndroidUSBCamera\app\build\intermediates\cxx\Debug\524p615t\obj\x86_64
+-DCMAKE_RUNTIME_OUTPUT_DIRECTORY=C:\Users\ezmod\AndroidStudioProjects\AndroidUSBCamera\app\build\intermediates\cxx\Debug\524p615t\obj\x86_64
+-DCMAKE_BUILD_TYPE=Debug
+-BC:\Users\ezmod\AndroidStudioProjects\AndroidUSBCamera\app\.cxx\Debug\524p615t\x86_64
+-GNinja
+-DOpenCV_DIR=C:\Users\ezmod\code\opencv-4.5.5-android-sdk\OpenCV-android-sdk/sdk/native
+jvmArgs : 
+
+
+                    Build command args: []
+                    Version: 2

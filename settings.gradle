@@ -1,1 +1,3 @@
 include ':app', ':libusbcamera'
+include ':opencv'
+project(':opencv').projectDir = new File(opencvsdk + '/sdk')

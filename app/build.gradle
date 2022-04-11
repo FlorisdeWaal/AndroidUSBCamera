@@ -1,21 +1,41 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
 
 android {
-    compileSdkVersion rootProject.ext.versionCompiler
+    compileSdkVersion 31//rootProject.ext.versionCompiler
     defaultConfig {
         applicationId "com.jiangdg.usbcamera"
-        minSdkVersion rootProject.ext.minSdkVersion
-        targetSdkVersion rootProject.ext.versionTarget
+        minSdkVersion 21//rootProject.ext.minSdkVersion
+        targetSdkVersion 31//rootProject.ext.versionTarget
         versionCode rootProject.ext.versionCode
         versionName rootProject.ext.versionNameString
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        externalNativeBuild {
+            cmake {
+                cppFlags ''
+                abiFilters 'x86', 'x86_64', 'armeabi-v7a', 'arm64-v8a'
+                arguments "-DOpenCV_DIR=" + opencvsdk + "/sdk/native"
+            }
+        }
     }
+
     buildTypes {
         release {
             minifyEnabled false
+            //version from androidtemplate!!
+            //proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            //version from USBcam
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    externalNativeBuild {
+        cmake {
+            path 'src/main/cpp/CMakeLists.txt'
+            version '3.10.2'
+        }
+    }
+    ndkVersion '23.1.7779620'
     // solving com.android.tools.r8.CompilationFailedException: Compilation failed to complete
     compileOptions {
         sourceCompatibility rootProject.ext.javaSourceCompatibility
@@ -26,10 +46,12 @@ android {
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
 
-    implementation "androidx.appcompat:appcompat:${androidXVersion}"
+    implementation "androidx.appcompat:appcompat:1.4.1"//${androidXVersion}"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
     implementation 'com.jakewharton:butterknife:10.2.0'
     annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.0'
 
     implementation project(':libusbcamera')
+    implementation project(path: ':opencv')
 }

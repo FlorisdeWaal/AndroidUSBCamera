@@ -1,4 +1,5 @@
 apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
 //apply plugin: 'com.github.dcendents.android-maven'
 group='com.github.jiangdongguo'
 
@@ -40,6 +41,11 @@ dependencies {
     implementation "androidx.appcompat:appcompat:${androidXVersion}"
 
     implementation(name: 'libusbcommon_v4.1.1', ext: 'aar')
+    implementation "androidx.core:core-ktx:+"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 //    classpath 'com.github.dcendents:android-maven-plugin:1.2'
 //    classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.2'
+}
+repositories {
+    mavenCentral()
 }

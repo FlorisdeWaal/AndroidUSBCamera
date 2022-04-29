@@ -62,7 +62,13 @@ public abstract class AbstractUVCCameraHandler extends Handler {
 
     private static final boolean DEBUG = true;    // TODO set false on release
     private static final String TAG = "AbsUVCCameraHandler";
-
+    //fdw native code
+    private static native void numlog(int number);
+    private static native void spoilBuffer(byte[] array);
+    static {
+        Log.d(TAG, " loading native-ocv");
+        System.loadLibrary("native-ocv");
+    }
 
     // 对外回调接口
     public interface CameraCallback {
@@ -804,7 +810,7 @@ public abstract class AbstractUVCCameraHandler extends Handler {
         public void handleStillPicture(String picPath) {
             this.picPath = picPath;
         }
-
+        //fdw add video editing code here
         private final IFrameCallback mIFrameCallback = new IFrameCallback() {
             @Override
             public void onFrame(final ByteBuffer frame) {
@@ -819,6 +825,9 @@ public abstract class AbstractUVCCameraHandler extends Handler {
                 int len = frame.capacity();
                 final byte[] yuv = new byte[len];
                 frame.get(yuv);
+                //numlog(5);
+                spoilBuffer(yuv);
+
                 // nv21 yuv data callback
                 if (mPreviewListener != null) {
                     mPreviewListener.onPreviewResult(yuv);

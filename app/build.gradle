@@ -28,6 +28,11 @@ android {
             //version from USBcam
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+        customDebugType {
+            debuggable true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+        }
     }
     externalNativeBuild {
         cmake {

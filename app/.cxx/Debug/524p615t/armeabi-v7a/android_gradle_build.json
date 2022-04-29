@@ -29,7 +29,9 @@
       "abi": "armeabi-v7a",
       "artifactName": "native-ocv",
       "output": "C:\\Users\\ezmod\\AndroidStudioProjects\\AndroidUSBCamera\\app\\build\\intermediates\\cxx\\Debug\\524p615t\\obj\\armeabi-v7a\\libnative-ocv.so",
-      "runtimeFiles": []
+      "runtimeFiles": [
+        "C:\\Users\\ezmod\\code\\opencv-4.5.5-android-sdk\\OpenCV-android-sdk\\sdk\\native\\libs\\armeabi-v7a\\libopencv_java4.so"
+      ]
     }
   },
   "toolchains": {},

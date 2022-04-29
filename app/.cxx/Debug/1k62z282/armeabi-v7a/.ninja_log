@@ -1,0 +1,7 @@
+# ninja log v5
+0	688	672756624	CMakeFiles/native-ocv.dir/native-ocv.cpp.o	f64cdfacbd6c1d03
+689	772	672756624	C:/Users/ezmod/StudioProjects/AndroidUSBCamera/app/build/intermediates/cxx/Debug/1k62z282/obj/armeabi-v7a/libnative-ocv.so	1d7b3240b1f8c46c
+3	728	672855960	CMakeFiles/native-ocv.dir/native-ocv.cpp.o	f64cdfacbd6c1d03
+728	848	672855960	C:/Users/ezmod/StudioProjects/AndroidUSBCamera/app/build/intermediates/cxx/Debug/1k62z282/obj/armeabi-v7a/libnative-ocv.so	1d7b3240b1f8c46c
+2	624	672874971	CMakeFiles/native-ocv.dir/native-ocv.cpp.o	f64cdfacbd6c1d03
+625	714	672874971	C:/Users/ezmod/StudioProjects/AndroidUSBCamera/app/build/intermediates/cxx/Debug/1k62z282/obj/armeabi-v7a/libnative-ocv.so	1d7b3240b1f8c46c

@@ -19,6 +19,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.SeekBar;
 import android.widget.Switch;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.jiangdg.usbcamera.AlertCustomDialog;
@@ -53,6 +54,7 @@ import butterknife.ButterKnife;
  */
 
 public class USBCameraActivity extends AppCompatActivity implements CameraDialog.CameraDialogParent, CameraViewInterface.Callback {
+
     private static final String TAG = "Debug";
     @BindView(R.id.camera_view)
     public View mTextureView;
@@ -64,6 +66,10 @@ public class USBCameraActivity extends AppCompatActivity implements CameraDialog
     public SeekBar mSeekContrast;
     @BindView(R.id.switch_rec_voice)
     public Switch mSwitchVoice;
+    @BindView(R.id.logtextview)
+    public TextView mLogText;
+
+    private int mesnum = 0;
 
     private UVCCameraHelper mCameraHelper;
     private CameraViewInterface mUVCCameraView;
@@ -71,6 +77,14 @@ public class USBCameraActivity extends AppCompatActivity implements CameraDialog
 
     private boolean isRequest;
     private boolean isPreview;
+
+    static {
+        Log.d(TAG, " loading native-ocv");
+        System.loadLibrary("native-ocv");
+    }
+    private native void spoilBuffer(byte[] array, int arrlen);
+    private native void numLog(int number);
+    private native String spoilSurface(Surface tex, int width, int height);
 
     private List<DeviceInfo> getUSBDevInfo() {
         if(mCameraHelper == null)
@@ -173,13 +187,17 @@ public class USBCameraActivity extends AppCompatActivity implements CameraDialog
         mUVCCameraView = (CameraViewInterface) mTextureView;
         mUVCCameraView.setCallback(this);
         mCameraHelper = UVCCameraHelper.getInstance(640, 480);
-        mCameraHelper.setDefaultFrameFormat(UVCCameraHelper.FRAME_FORMAT_MJPEG);
+        mCameraHelper.setDefaultFrameFormat(UVCCameraHelper.FRAME_FORMAT_YUYV);
         mCameraHelper.initUSBMonitor(this, mUVCCameraView, listener);
-
         mCameraHelper.setOnPreviewFrameListener(new AbstractUVCCameraHandler.OnPreViewResultListener() {
             @Override
             public void onPreviewResult(byte[] nv21Yuv) {
+                //numLog(3);
                 Log.d(TAG, "onPreviewResult: "+nv21Yuv.length);
+                spoilBuffer(nv21Yuv, nv21Yuv.length);
+
+                mLogText.setText("bytebuffer of length: " + nv21Yuv.length + "message number " + mesnum);
+                mesnum++;
             }
         });
     }
@@ -225,6 +243,8 @@ public class USBCameraActivity extends AppCompatActivity implements CameraDialog
 
             }
         });
+
+        numLog(5);
     }
 
     @Override
@@ -429,7 +449,7 @@ public class USBCameraActivity extends AppCompatActivity implements CameraDialog
 
     @Override
     public void onSurfaceChanged(CameraViewInterface view, Surface surface, int width, int height) {
-
+        spoilSurface(surface, width, height);
     }
 
     @Override

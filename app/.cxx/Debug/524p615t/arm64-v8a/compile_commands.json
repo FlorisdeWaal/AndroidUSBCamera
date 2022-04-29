@@ -1,7 +1,7 @@
 [
 {
   "directory": "C:/Users/ezmod/AndroidStudioProjects/AndroidUSBCamera/app/.cxx/Debug/524p615t/arm64-v8a",
-  "command": "C:\\Users\\ezmod\\code\\android-ndk-r23b\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=C:/Users/ezmod/code/android-ndk-r23b/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=C:/Users/ezmod/code/android-ndk-r23b/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dnative_ocv_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -fno-limit-debug-info  -fPIC   -o CMakeFiles\\native-ocv.dir\\native-ocv.cpp.o -c C:\\Users\\ezmod\\AndroidStudioProjects\\AndroidUSBCamera\\app\\src\\main\\cpp\\native-ocv.cpp",
+  "command": "C:\\Users\\ezmod\\code\\android-ndk-r23b\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=C:/Users/ezmod/code/android-ndk-r23b/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=C:/Users/ezmod/code/android-ndk-r23b/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dnative_ocv_EXPORTS -IC:/Users/ezmod/code/opencv-4.5.5-android-sdk/OpenCV-android-sdk/sdk/native/jni/include  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -fno-limit-debug-info  -fPIC   -o CMakeFiles\\native-ocv.dir\\native-ocv.cpp.o -c C:\\Users\\ezmod\\AndroidStudioProjects\\AndroidUSBCamera\\app\\src\\main\\cpp\\native-ocv.cpp",
   "file": "C:\\Users\\ezmod\\AndroidStudioProjects\\AndroidUSBCamera\\app\\src\\main\\cpp\\native-ocv.cpp"
 }
 ]

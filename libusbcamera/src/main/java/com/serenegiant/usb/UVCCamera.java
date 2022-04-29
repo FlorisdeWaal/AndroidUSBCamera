@@ -40,6 +40,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class UVCCamera {
+
+	//fdw code
+	private native SurfaceTexture spoilSurface(SurfaceTexture tex);
+
 	private static final boolean DEBUG = false;	// TODO set false when releasing
 	private static final String TAG = UVCCamera.class.getSimpleName();
 	private static final String DEFAULT_USBFS = "/dev/bus/usb";
@@ -405,7 +409,10 @@ public class UVCCamera {
      * @param texture
      */
     public synchronized void setPreviewTexture(final SurfaceTexture texture) {	// API >= 11
-    	final Surface surface = new Surface(texture);	// XXX API >= 14
+		Log.d(TAG, "setPreviewTexture: entry");
+    	//final SurfaceTexture spoiled = spoilSurface(texture);
+    	final Surface surface = new Surface(texture);// XXX API >= 14
+		//final Surface surface = new Surface(spoiled);
     	nativeSetPreviewDisplay(mNativePtr, surface);
     }
 
@@ -414,6 +421,7 @@ public class UVCCamera {
      * @param surface
      */
     public synchronized void setPreviewDisplay(final Surface surface) {
+		Log.d(TAG, "setPreviewDisplay: entry");
     	nativeSetPreviewDisplay(mNativePtr, surface);
     }
 

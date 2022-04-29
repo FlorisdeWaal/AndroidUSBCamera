@@ -62,6 +62,8 @@ public class UVCCameraTextureView extends AspectRatioTextureView    // API >= 14
 	private Callback mCallback;
 	// Camera分辨率宽度
 
+	private native void spoilBuffer(byte[] array);
+
 
 	/** for calculation of frame rate */
 	private final FpsCounter mFpsCounter = new FpsCounter();
@@ -102,6 +104,7 @@ public class UVCCameraTextureView extends AspectRatioTextureView    // API >= 14
 
 	@Override
 	public void onSurfaceTextureAvailable(final SurfaceTexture surface, final int width, final int height) {
+
 		if (DEBUG) Log.i(TAG, "onSurfaceTextureAvailable:" + surface);
 		if (mRenderHandler == null) {
 			mRenderHandler = RenderHandler.createHandler(mFpsCounter, surface, width, height);
